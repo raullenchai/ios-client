@@ -11,7 +11,7 @@ permissions:
 jobs:
   test:
     name: Build and Test
-    runs-on: manzanita-standard
+    runs-on: [self-hosted, manzanita-image-qualification]
     timeout-minutes: 30
 
     steps:
@@ -23,6 +23,7 @@ jobs:
         with:
           path: ios-client
           submodules: recursive
+          persist-credentials: false
 
       - name: Get netbird-core commit
         id: core-sha
