@@ -11,7 +11,7 @@ permissions:
 jobs:
   test:
     name: Build and Test
-    runs-on: manzanita-standard
+    runs-on: [manzanita-standard, manzanita-macos-15, manzanita-xcode-26.1.1]
     timeout-minutes: 30
 
     steps:
